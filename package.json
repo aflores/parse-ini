@@ -1,0 +1,16 @@
+{
+  "name": "parse-ini",
+  "version": "1.0.0",
+  "description": "A node.js service to read a .ini file and convert it to JSON using custom build schema",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Armando Flores",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "lodash": "^4.17.15"
+  }
+}

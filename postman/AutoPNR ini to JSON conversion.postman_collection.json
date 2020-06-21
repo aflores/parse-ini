@@ -1,0 +1,66 @@
+{
+	"info": {
+		"_postman_id": "b69d5ad9-1619-4fec-9901-ed4d145b164f",
+		"name": "AutoPNR ini to JSON conversion",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "About - AutoPNR ini to JSON",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3030/about",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3030",
+					"path": [
+						"about"
+					]
+				},
+				"description": "ping the ini 2 json service"
+			},
+			"response": []
+		},
+		{
+			"name": "Convert the ini file",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "ini",
+							"value": "     '  ffffffff\n'comment\nfinal01=f1{aas};#${qw}[f34]uno\nfinal02=f-dos\nfinal03=f-3tres\n[section]\n     keya =  value1              \nabc       = 123\nkey1aa = 12345 sss\n' xxx\ninit001 = i-one\ninit002 = i  two\ninit003 = i  three   3 \nkey00002 = value2\n'zzzz\nuser01=29feb\nuser02= 2uuuuu2\n[jjjjjjjj]\nkey3={some fancy;content#}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3030/convertAutoPNR",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3030",
+					"path": [
+						"convertAutoPNR"
+					]
+				},
+				"description": "Post requet to convert the contents of the ini form field"
+			},
+			"response": []
+		}
+	]
+}
